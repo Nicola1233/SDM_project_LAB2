@@ -35,21 +35,30 @@ pub:Title a rdf:Property ;
 
 pub:Workshop rdfs:subClassOf pub:Event .
 
-pub:belongs_to a rdf:Property ;
+pub:cites a rdf:Property ;
+    rdfs:domain pub:Paper ;
+    rdfs:range pub:Paper .
+
+pub:city a rdf:Property ;
     rdfs:domain pub:Proceeding,
         pub:Volume ;
-    rdfs:range pub:Event,
-        pub:Journal .
+    rdfs:range xsd:string .
 
-pub:city rdfs:domain pub:Proceeding,
-        pub:Volume ;
-    rdfs:range pub:string .
+pub:hindex a rdf:Property ;
+    rdfs:domain pub:Author ;
+    rdfs:range xsd:string .
 
-pub:has_year a rdf:Property .
+pub:name a rdf:Property ;
+    rdfs:domain pub:Author ;
+    rdfs:range xsd:string .
 
 pub:presented_in a rdf:Property ;
     rdfs:domain pub:Publication ;
     rdfs:range pub:Proceeding .
+
+pub:proceedingBelongsToEvent a rdf:Property ;
+    rdfs:domain pub:Proceeding ;
+    rdfs:range pub:Event .
 
 pub:published_in a rdf:Property ;
     rdfs:domain pub:Publication ;
@@ -67,9 +76,14 @@ pub:reviewer a rdf:Property ;
     rdfs:domain pub:Review ;
     rdfs:range pub:Reviewer .
 
-pub:year rdfs:domain pub:Proceeding,
+pub:volumeBelongsToJournal a rdf:Property ;
+    rdfs:domain pub:Volume ;
+    rdfs:range pub:Journal .
+
+pub:year a rdf:Property ;
+    rdfs:domain pub:Proceeding,
         pub:Volume ;
-    rdfs:range pub:int .
+    rdfs:range xsd:int .
 
 pub:RevelantAuthors rdfs:subClassOf pub:Authors .
 
