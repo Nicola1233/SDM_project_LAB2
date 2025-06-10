@@ -71,10 +71,6 @@ pub:email a rdf:Property ;
     rdfs:domain pub:Author ;
     rdfs:range xsd:string .
 
-pub:hIndex a rdf:Property ;
-    rdfs:domain pub:Author ;
-    rdfs:range xsd:integer .
-
 pub:isAbout a rdf:Property ;
     rdfs:domain pub:Paper ;
     rdfs:range pub:Keyword .
