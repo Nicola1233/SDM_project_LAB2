@@ -3,8 +3,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-pub:Abstract a rdfs:Class .
-
 pub:Author a rdfs:Class .
 
 pub:Conference a rdfs:Class ;
@@ -61,10 +59,6 @@ pub:cityLiteral a rdf:Property ;
     rdfs:domain pub:Proceedings ;
     rdfs:range xsd:string .
 
-pub:contains a rdf:Property ;
-    rdfs:domain pub:Paper ;
-    rdfs:range pub:Abstract .
-
 pub:doi a rdf:Property ;
     rdfs:domain pub:Paper ;
     rdfs:range xsd:string .
@@ -80,10 +74,6 @@ pub:email a rdf:Property ;
 pub:hIndex a rdf:Property ;
     rdfs:domain pub:Author ;
     rdfs:range xsd:integer .
-
-pub:hasIndex a rdf:Property ;
-    rdfs:domain pub:Author ;
-    rdfs:range pub:HIndex .
 
 pub:isAbout a rdf:Property ;
     rdfs:domain pub:Paper ;
@@ -101,10 +91,6 @@ pub:name a rdf:Property ;
     rdfs:domain pub:Author ;
     rdfs:range xsd:string .
 
-pub:ofVenueIn a rdf:Property ;
-    rdfs:domain pub:Proceedings ;
-    rdfs:range pub:City .
-
 pub:pages a rdf:Property ;
     rdfs:domain pub:Paper ;
     rdfs:range xsd:integer .
@@ -113,17 +99,9 @@ pub:presentedIn a rdf:Property ;
     rdfs:domain pub:Paper ;
     rdfs:range pub:Proceedings .
 
-pub:presentedInYear a rdf:Property ;
-    rdfs:domain pub:Proceedings ;
-    rdfs:range pub:Year .
-
 pub:publishedIn a rdf:Property ;
     rdfs:domain pub:Paper ;
     rdfs:range pub:Volume .
-
-pub:publishedInYear a rdf:Property ;
-    rdfs:domain pub:Volume ;
-    rdfs:range pub:Year .
 
 pub:reviews a rdf:Property ;
     rdfs:domain pub:Reviewer ;
